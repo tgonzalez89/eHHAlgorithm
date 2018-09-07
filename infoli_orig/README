@@ -1,0 +1,21 @@
+Para compilar 
+
+gcc infoli.c infoli_tb.c -o infoli -lm
+
+
+Para ejecutar 
+
+./infoli
+
+Para variar el número de neuronas, abrir el archivo infoli.h y cambiar la variable TIME_MUX_FACTOR
+
+No probar con TIME_MUX_FACTOR > 1000, algunas variables estáticas desbordan.
+
+
+
+Si se quiere cambiar el número de pasos de simulación, cambiar la variable SIMTIME localizada en el archivo infoli.h. SIMTIME 1 
+equivale a 20 pasos de simulación, SIMTIME = 2 equivale a 40 pasos de simulación.
+
+
+
+Recuerde que idealmente, cada paso de simulación debe ejecutarse en 50us.

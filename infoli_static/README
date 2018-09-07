@@ -1,0 +1,12 @@
+How to compile:
+gcc infoli.c main.c -o infoli -lm
+[-O3, -O2 or -O1] to optimize code for faster execution
+[-D NO_OUTPUT] to disable printing detailed information and to disable printing the information to an output to a file (named InferiorOlive_Output.txt)
+[-D NO_BENCH] don't ouput the timing information benchmarking how much the program took to run.
+[-D NETWORK_SIZE=<number>] to indicate amount of neurons in the network (default is 1)
+[-D SIMULATION_STEPS=<number>] to indicate amount of simulation steps (default is 20)
+[-fopenmp] to run with multiple cores (timing measurements will not be accurate)
+
+How to run:
+./infoli
+

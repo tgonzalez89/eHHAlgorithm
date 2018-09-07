@@ -1,0 +1,9 @@
+How to compile:
+gcc infoli.c main.c -o infoli -lm
+[-O3, -O2 or -O1] to optimize code for faster execution
+[-D NO_OUTPUT] to disable printing detailed information and to disable printing the information to an output to a file (named InferiorOlive_Output.txt)
+[-fopenmp] to run with multiple cores (timing measurements will not be accurate)
+
+How to run:
+./infoli <network_size> <simulation_steps>
+
