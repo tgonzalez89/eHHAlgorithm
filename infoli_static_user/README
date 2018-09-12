@@ -1,0 +1,10 @@
+How to compile:
+gcc infoli.c main.c -o infoli -O3 -lm
+[-DOUTPUT_RESULTS] to print detailed information to a file named InferiorOlive_Output.txt
+[-DSTEP_CHECKPOINT] to print an info message after each simulation step is done.
+[-DMAX_NETWORK_SIZE=<number>] to indicate max amount of neurons in the network (default is 10000)
+[-DMAX_SIMULATION_STEPS=<number>] to indicate max amount of simulation steps (default is 10000)
+[-fopenmp] to run with multiple cores
+
+How to run:
+./infoli <network_size> <simulation_steps>
