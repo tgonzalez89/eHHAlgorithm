@@ -119,18 +119,19 @@ int main(int argc, char* argv[]) {
         #ifdef STEP_CHECKPOINT
 		struct timeval lend;
 		gettimeofday(&lend, NULL);
-		float ms_elapsed = ((lend.tv_sec - lbegin.tv_sec)*1000000ull + (lend.tv_usec - lbegin.tv_usec))*0.001;
+		float ms_elapsed = ((lend.tv_sec - lbegin.tv_sec)*1000000ull + (lend.tv_usec - lbegin.tv_usec))*0.001f;
         printf("Done simulating step #%llu at %.3f ms.\n", (unsigned long long)i+1, ms_elapsed);
         #endif
     }
 
     struct timeval lend;
     gettimeofday(&lend, NULL);
-    float ms_elapsed = ((lend.tv_sec - lbegin.tv_sec)*1000000ull + (lend.tv_usec - lbegin.tv_usec))*0.001;
-    printf("Time elapsed: %.3f ms, %.3f ms per step.\n", ms_elapsed, ms_elapsed / simulation_steps);
+    float us_elapsed = (lend.tv_sec - lbegin.tv_sec)*1000000ull + (lend.tv_usec - lbegin.tv_usec);
+    printf("Time elapsed: %.3f ms, %.3f us per step.\n", us_elapsed/1000.0f, us_elapsed / simulation_steps);
     #ifdef OUTPUT_RESULTS
     fclose(fp);
     #endif
 
     return 0;
 }
+
